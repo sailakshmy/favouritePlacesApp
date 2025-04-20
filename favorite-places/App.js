@@ -17,6 +17,7 @@ export default function App() {
             name="AllPlaces"
             component={AllPlaces}
             options={({ navigation }) => ({
+              title: "Your favorite places",
               headerRight: ({ tintColor }) => (
                 <IconButton
                   name="add"
@@ -27,7 +28,13 @@ export default function App() {
               ),
             })}
           />
-          <Stack.Screen name="AddPlace" component={AddPlace} />
+          <Stack.Screen
+            name="AddPlace"
+            component={AddPlace}
+            options={{
+              title: "Add a new place",
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
